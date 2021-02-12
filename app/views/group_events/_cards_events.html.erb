@@ -1,9 +1,11 @@
+<div class="cards">
+  <% @group_events.each do |group_event| %>
+    <div class="card-category" >
 
-
-  <div class="cards">
-  
-    <% @group_events.each do |group_event| %>
-    <%= group_event.name %>
-    <% end %>
-  </div>
-
+      <div class="card-info">
+        <%= link_to group_event.name, group_event_path(group_event), class:"text" %> 
+      </div>
+        <%= link_to 'X' , group_events_path(group_event) , method: :delete, class:"btn btn-light"%>
+    </div>
+  <%end %>
+</div>
