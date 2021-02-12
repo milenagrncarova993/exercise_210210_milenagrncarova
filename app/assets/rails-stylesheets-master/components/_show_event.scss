@@ -1,0 +1,45 @@
+.container-show{
+    display: flex;
+    height:590px;
+    margin-top:50px;
+}
+
+.show-picture{
+    float: left;
+    width: 50%;
+    background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), image-url("show.png");
+    background-size: cover;
+    background-position: center;
+
+}
+
+.show-text{
+    float: right;
+    width: 50%;
+    padding: 30px;
+    width: 50%;
+    font-weight: bold;
+    background: white;
+    height: 100%;
+
+    h2{
+        color:$links-danger;
+        font:bold;
+        font-size:50px;
+    }
+
+    h3{
+        color:grey; 
+        font:bold;
+        font-size:25px;
+    }
+
+    h6{
+        font:bold;
+        color:grey;
+    }
+
+    p{
+        font-size: 20px;
+    }
+}

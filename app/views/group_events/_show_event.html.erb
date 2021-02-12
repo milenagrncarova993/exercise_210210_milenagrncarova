@@ -1,0 +1,24 @@
+<div class="container-show">
+    <div class="show-picture"></div>
+
+    <div class="show-text">
+        <h2><%= @group_event.name %></h2>
+        <hr>
+        <h3>Event description </h3>
+        <p><%= @group_event.description %></p>
+        <h3>Location</h3>
+        <p><i class="fa fa-map-marker" aria-hidden="true"></i> <%= @group_event.location%></p>
+        <h3>Starting date</h3>
+        <p><i class="fas fa-calendar-alt"></i> <%= (@group_event.start_date).strftime("%A, %d %B %Y") %></p>
+        <h3>Ending date </h3>
+        <p><i class="fas fa-calendar-alt"></i> <%= (@group_event.end_date).strftime("%A, %d %B %Y") %></p>
+
+        <div class="mt-3">
+            <h6> Duration of event </h6>
+            <h6> <%= pluralize( (@group_event.end_date - @group_event.start_date).to_i, 'Day' ) %></h6>
+        </div>
+
+        <%= link_to 'Events',  group_events_path, class: "btn btn-primary" %>
+        <%= link_to 'Edit Event',   edit_group_event_path, class: "btn btn-primary" %>
+    </div>
+</div>
