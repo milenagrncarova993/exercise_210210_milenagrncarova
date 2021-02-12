@@ -1,12 +1,11 @@
 class GroupEventsController < ApplicationController
-  before_action :set_group_event, only: [:show, :edit, :update, :destroy]
 
   def index
       @group_events = GroupEvent.all
   end
 
   def show
-
+    @group_event = GroupEvent.find(params[:id])
   end
 
   def new
@@ -22,16 +21,18 @@ class GroupEventsController < ApplicationController
   end
 
   def edit
-
+    @group_event = GroupEvent.find(params[:id])
   end
 
   def update
+    @group_event = GroupEvent.find(params[:id])
     @group_event.update(group_event_params)
 
     redirect_to group_event_path(@group_event)
   end
 
   def destroy
+    @group_event = GroupEvent.find(params[:id])
     @group_event.destroy
 
     redirect_to group_event_path
@@ -41,10 +42,6 @@ class GroupEventsController < ApplicationController
 
   def group_event_params
     params.require(:group_event).permit(:name, :description, :location, :start_date, :end_date)
-  end
-
-  def set_group_event
-    @group_event = GroupEvent.find(params[:id])
   end
 
 
