@@ -1,10 +1,36 @@
 .navbar-lewagon {
+  position: absolute;
+  width: 100%;
+  background: transparent;
+  box-shadow: none;
   justify-content: space-between;
-  background: white;
+
+  a {
+    padding-right: 2rem;
+    color: white;
+    font-weight: bold;
+    transition-property: color;
+    transition-duration: 0.8s;
+  }
+  a:hover {
+    color: $links-danger;
+  }
+
+  .dropdown-menu-right {
+    a {
+      color:$links-danger;
+      font-weight: bold;
+      text-decoration: none;
+      transition-duration: 0.8s;
+      padding-right: 2rem;
+    }
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
+  color:white;
+  font: bold;
 }
 
 .navbar-lewagon .navbar-brand img {
