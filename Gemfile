@@ -52,3 +52,5 @@ gem 'simple_form'
 
 #Authentication
 gem 'devise'
+
+gem 'dotenv-rails', groups: [:development, :test]
