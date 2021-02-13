@@ -4,6 +4,29 @@
   background: transparent;
   box-shadow: none;
   justify-content: space-between;
+  padding: 20px;
+  margin-bottom: 30px;
+
+  a {
+    color:white;
+    text-decoration: none;
+    transition-property: color;
+    transition-duration: 0.8s;
+    padding-top: 10px;
+    padding-right: 2rem;
+  }
+  a:hover {
+    color: $links-danger;
+  }
+  .login {
+    border: 1px solid;
+    padding: 10px 15px;
+    border-radius: 4px
+  }
+}
+.navbar-home {
+  background: transparent;
+  box-shadow: none;
 
   a {
     padding-right: 2rem;
@@ -13,7 +36,7 @@
     transition-duration: 0.8s;
   }
   a:hover {
-    color: $links-danger;
+    color: white;
   }
 
   .dropdown-menu-right {
@@ -25,14 +48,13 @@
       padding-right: 2rem;
     }
   }
+
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
-  color:white;
-  font: bold;
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 50px;
 }
