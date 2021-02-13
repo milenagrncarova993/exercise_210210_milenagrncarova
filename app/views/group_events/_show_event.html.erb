@@ -15,7 +15,7 @@
 
         <div class="mt-3">
             <h6> Duration of event </h6>
-            <h6> <%= pluralize( (@group_event.end_date - @group_event.start_date).to_i, 'Day' ) %></h6>
+            <h6> <%= pluralize( (@group_event.end_date - @group_event.start_date).to_i/(365*24*12), 'Day' ) %></h6>
         </div>
 
         <%= link_to 'Events',  group_events_path, class: "btn btn-primary" %>

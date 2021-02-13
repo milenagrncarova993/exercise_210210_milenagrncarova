@@ -15,9 +15,11 @@ class GroupEventsController < ApplicationController
   def create
     @group_event = GroupEvent.new(group_event_params)
     @group_event.user = current_user
-    @group_event.save
-
-    redirect_to group_events_path(@group_event)
+     if @group_event.save
+     redirect_to group_events_path(@group_event)
+     else
+      render :new
+     end
   end
 
   def edit
@@ -41,7 +43,7 @@ class GroupEventsController < ApplicationController
   private
 
   def group_event_params
-    params.require(:group_event).permit(:name, :description, :location, :start_date, :end_date)
+    params.require(:group_event).permit(:name, :description, :location, :start_date, :end_date, :status)
   end
 
 
