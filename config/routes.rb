@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
-  
-  resources :group_events
-  
+
+  namespace :api, defaults: { format: :json } do
+    namespace :v1 do
+      resources :group_events , only: [ :index, :show, :update, :create, :destroy ]
+    end
+  end
 end
