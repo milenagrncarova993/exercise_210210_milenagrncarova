@@ -8,23 +8,25 @@ class GroupEventsController < ApplicationController
     @group_event = GroupEvent.find(params[:id])
   end
 
+  def edit
+    @group_event = GroupEvent.find(params[:id])
+  end
+
   def new
+    @user = current_user
     @group_event = GroupEvent.new 
   end
 
   def create
+    @user = current_user
     @group_event = GroupEvent.new(group_event_params)
     @group_event.user = current_user
      if @group_event.save
-     redirect_to group_events_path(@group_event)
+     redirect_to group_event_path(@group_event)
      else
       render :new
      end
     end
-
-  def edit
-    @group_event = GroupEvent.find(params[:id])
-  end
 
   def update
     @group_event = GroupEvent.find(params[:id])
