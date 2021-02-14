@@ -2,30 +2,8 @@
   <div class="row justify-content-center mr-0">
     <div class="col-6 form-col">
       <div class="form-new-move">
-          <%= simple_form_for [@group_event] do |f| %>
-          <h1>Plan your event!</h1>
-
-          <div class="form-inputs mt-3">
-          <hr>
-          <h5><strong> 
-          <%= f.input :start_date, as: :string, input_html: {class: "datepicker"}, label: "When is the event starting?", placeholder: "Click to pick from calendar"%>
-          <%= f.input :end_date, as: :string, input_html: {class: "datepicker"}, label: "When is the event ending?", placeholder: "Click to pick from calendar"%>
-          </strong></h5>
-          </div>
-
-          <hr>
-          <div class="mt-3 mb-3">
-          <h5><strong>Details about the event</strong></h5>
-          </div>
-
-          <h5><%= f.input :name %></h5>
-          <h5><%= f.input :location %></h5>
-          <h5><%= f.input :description %></h5>
-
-          <div class="form-actions mb-3">
-          <%= f.submit class:"button btn btn btn-lg btn-primary" %>
-          </div>
-          <% end %>
+            <!-- Insert form here -->
+          <%= render 'form' %>
       </div>
     </div>
   </div>

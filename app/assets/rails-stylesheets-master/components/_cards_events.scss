@@ -2,9 +2,10 @@
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: 10px;
   border-radius: 5px;
   grid-gap: 25px;
+  margin-bottom: 1000px;
+  margin-top: 40px;
     
   }
   .cards img {
@@ -25,6 +26,11 @@
     align-items: flex-end;
     position: relative;
     background-color: white;
+
+    .card-info:hover {
+      /* other rules */
+      color: transparent;
+    }
   }
  .text{
    color:black;
